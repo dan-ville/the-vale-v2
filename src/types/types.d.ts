@@ -41,5 +41,5 @@ export interface CharacterInterface {
   "Skin Color"?: string
   "Eye Color"?: string
   "Name (from Tribe)"?: string[]
-  "Name (from Species)"?: string[]
+  "Name (from Species)": string[]
 }

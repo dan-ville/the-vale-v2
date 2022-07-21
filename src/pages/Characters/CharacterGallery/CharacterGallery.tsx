@@ -1,18 +1,19 @@
 import { CharacterInterface } from "../../../types/types"
-import { Link } from "react-router-dom"
+import CharacterCard from "./CharacterCard"
+import "../style.scss"
 
 interface Props {
   characters: CharacterInterface[]
 }
 const CharacterGallery = ({ characters }: Props) => {
+
   return (
-    <div>
+    <div className="gallery">
       {characters.map((character, key) => (
-        <div key={key}>
-          <Link to={`/characters/${character.Name.trim()}`}>
-            {character.Name.trim()}
-          </Link>
-        </div>
+        <CharacterCard
+          key={key}
+          character={character}
+        />
       ))}
     </div>
   )

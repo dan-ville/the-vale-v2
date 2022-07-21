@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
-import CharacterGallery from "../../../components/characters/CharacterGallery"
 import { AppContext, ContextType } from "../../../context/AppContext"
+import CharacterGallery from "./CharacterGallery"
 
 const CharacterGalleryPage = () => {
   const { characters, status, error } = useContext(AppContext) as ContextType

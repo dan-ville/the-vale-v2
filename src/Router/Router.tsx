@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import App from "../App"
 import Characters from "../pages/Characters"
-import Character from "../pages/Characters/Character"
+import CharacterPage from "../pages/Characters/Character/CharacterPage"
+
 import CharacterGallery from "../pages/Characters/CharacterGallery"
 
 const Router = () => {
@@ -11,7 +12,7 @@ const Router = () => {
         <Route path="/" element={<App />}>
           <Route path="/characters" element={<Characters />}>
             <Route index element={<CharacterGallery />} />
-            <Route path=":characterName" element={<Character />} />
+            <Route path=":characterName" element={<CharacterPage />} />
           </Route>
         </Route>
       </Routes>

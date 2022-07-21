@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { useParams } from "react-router-dom"
-import Character from "../../../components/characters/Character"
 import { AppContext, ContextType } from "../../../context/AppContext"
+import CharacterProfile from "./CharacterProfile"
 
 const CharacterPage = () => {
   const { characterName } = useParams()
@@ -14,7 +14,7 @@ const CharacterPage = () => {
   )
 
   return character ? (
-    <Character character={character} />
+    <CharacterProfile character={character} />
   ) : (
     <p>That character does not exist</p>
   )

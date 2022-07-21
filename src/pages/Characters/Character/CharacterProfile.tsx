@@ -4,7 +4,7 @@ interface Props {
   character: CharacterInterface
 }
 
-const Character = ({ character }: Props) => {
+const CharacterProfile = ({ character }: Props) => {
   return (
     <div>
       <h3>{character.Name}</h3>
@@ -18,4 +18,4 @@ const Character = ({ character }: Props) => {
   )
 }
 
-export default Character
+export default CharacterProfile
