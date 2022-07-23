@@ -1,7 +1,10 @@
 @use "../utils/variables";
 
-nav {
+.App {
   width: 95%;
+  margin: auto;
+}
+nav {
   margin: auto;
   padding: 1rem;
 
