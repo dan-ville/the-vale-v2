@@ -1,3 +1,5 @@
+@use "../../../utils/variables.scss";
+
 #character-page {
   .character-links {
     display: flex;
@@ -7,9 +9,18 @@
     align-items: center;
     font-size: 1.2rem;
 
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      color: variables.$orange;
+      text-decoration: underline;
+    }
+
     .main-character {
       font-family: "Gravedigger";
-      font-size: 2rem;
+      font-size: 2.5rem;
+      color: variables.$orange;
     }
   }
 }
