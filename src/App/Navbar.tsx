@@ -5,14 +5,15 @@ const links = [
   { to: "characters", text: "Characters" },
   { to: "read", text: "Read" },
 ]
+
 const Navbar = () => {
   const activeStyle = "active"
 
   return (
     <nav>
       <ul>
-        {links.map((link) => (
-          <li>
+        {links.map((link, index) => (
+          <li key={index}>
             <NavLink
               to={link.to}
               className={({ isActive }) => (isActive ? activeStyle : "")}

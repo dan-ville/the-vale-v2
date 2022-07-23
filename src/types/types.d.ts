@@ -13,6 +13,7 @@ export interface CharacterInterface {
     | "Flat Character"
     | "Confidante"
     | "Villain"
+  Biography: string
   "Personality Keywords"?: string
   Scenes?: string[]
   "Inspirational images"?: Array<{

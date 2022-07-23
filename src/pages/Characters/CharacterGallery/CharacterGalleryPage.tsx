@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import PageHeader from "../../../components/PageHeader"
 import { AppContext, ContextType } from "../../../context/AppContext"
 import CharacterGallery from "./CharacterGallery"
 
@@ -10,10 +11,10 @@ const CharacterGalleryPage = () => {
   if (error) return <p>{error.message}</p>
 
   return (
-    <div>
-      <h2>Characters</h2>
+    <section id="character-profile">
+      <PageHeader text="Characters" />
       <CharacterGallery characters={characters} />
-    </div>
+    </section>
   )
 }
 

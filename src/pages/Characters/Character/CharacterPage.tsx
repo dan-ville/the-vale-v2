@@ -7,16 +7,30 @@ const CharacterPage = () => {
   const { characterName } = useParams()
   const { characters } = useContext(AppContext) as ContextType
 
-  const character = characters.find(
-    (character) =>
+  const indexedCharacters = characters.map((character, index) => ({
+    ...character,
+    index,
+  }))
+
+  const character = indexedCharacters.find((character) => {
+    const match =
       character.Name.trim().toLowerCase() ===
       characterName?.trim().toLowerCase()
-  )
 
-  return character ? (
-    <CharacterProfile character={character} />
-  ) : (
-    <p>That character does not exist</p>
+    return match
+  })
+
+  return (
+    <section id="character-page">
+      <div className="character-links">
+        <h3 className="main-character">{character?.Name}</h3>
+      </div>
+      {character ? (
+        <CharacterProfile character={character} />
+      ) : (
+        <p>That character does not exist</p>
+      )}
+    </section>
   )
 }
 

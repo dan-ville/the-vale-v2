@@ -1,5 +1,7 @@
+import PageHeader from "../../components/PageHeader"
+
 const Homepage = () => {
-  return <div>Homepage</div>
+  return <section id='homepage'><PageHeader text="Homepage"/></section>
 }
 
 export default Homepage
