@@ -6,14 +6,10 @@ interface Props {
   characters: CharacterInterface[]
 }
 const CharacterGallery = ({ characters }: Props) => {
-
   return (
     <div className="gallery">
       {characters.map((character, key) => (
-        <CharacterCard
-          key={key}
-          character={character}
-        />
+        <CharacterCard key={key} character={character} />
       ))}
     </div>
   )
