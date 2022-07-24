@@ -15,11 +15,6 @@ const CharacterCard = ({ character }: Props) => {
       onClick={() => navigate(`/characters/${character.Name}`)}
     >
       <p className="card-name">{character.Name}</p>
-      <p className="card-subheader">
-        {character["Name (from Species)"]?.length > 1
-          ? character["Name (from Species)"].join(" - ")
-          : character["Name (from Species)"]}
-      </p>
       <img
         className="card-image"
         src={character["Inspirational images"]?.[0].thumbnails["large"].url}

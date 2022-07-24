@@ -1,10 +1,7 @@
 @use "../../utils/variables.scss";
 
 .page-header {
-  padding-top: 0;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0;
   margin: auto;
-  text-align: center;
-  font-size: 2rem;
-  font-family: "Gravedigger";
+  font-weight: 400;
 }

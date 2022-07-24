@@ -2,15 +2,30 @@
 
 .App {
   width: 95%;
+  max-width: 1350px;
   margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    width: 100%;
+  }
+
+  main {
+    flex: 1;
+  }
 }
+
 nav {
   margin: auto;
-  padding: 1rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   ul {
     display: flex;
-    justify-content: flex-end;
     gap: 1rem;
   }
 
@@ -25,4 +40,9 @@ nav {
   .active {
     color: variables.$orange;
   }
+}
+
+footer {
+  text-align: center;
+  padding: 5rem;
 }

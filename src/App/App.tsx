@@ -9,6 +9,9 @@ function App() {
       <main>
         <Outlet />
       </main>
+      <footer>
+        Made by <a href="https://danielvillegas.dev/">Daniel Villegas</a>
+      </footer>
     </div>
   )
 }

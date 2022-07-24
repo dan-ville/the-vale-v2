@@ -3,10 +3,10 @@
 #character-page {
   .character-links {
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    align-items: flex-start;
     font-size: 1.2rem;
 
     a {

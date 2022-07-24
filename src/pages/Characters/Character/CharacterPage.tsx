@@ -26,30 +26,28 @@ const CharacterPage = () => {
   const prevCharacter = prevCharIndex !== undefined && characters[prevCharIndex]
   const nextCharacter = nextCharIndex !== undefined && characters[nextCharIndex]
 
+  if (!character) return <p>Oops! That character does not exist.</p>
+
   return (
     <section id="character-page">
       <div className="character-links">
-        {character?.index === 0
+        {character.index === 0
           ? null
           : prevCharacter && (
               <NavLink to={`/characters/${characters[prevCharIndex].Name}`}>
-                {prevCharacter && characters[prevCharIndex].Name}
+                {` - `} {prevCharacter && characters[prevCharIndex].Name}
               </NavLink>
             )}
-        <h3 className="main-character">{character?.Name}</h3>
-        {character?.index === characters.length - 1
+        <h3 className="main-character">{character.Name}</h3>
+        {character.index === characters.length - 1
           ? null
           : nextCharacter && (
               <NavLink to={`/characters/${nextCharacter.Name}`}>
-                {nextCharacter && nextCharacter.Name}
+                {` - `} {nextCharacter && nextCharacter.Name}
               </NavLink>
             )}
       </div>
-      {character ? (
-        <CharacterProfile character={character} />
-      ) : (
-        <p>That character does not exist</p>
-      )}
+      <CharacterProfile character={character} />
     </section>
   )
 }
